@@ -50,4 +50,4 @@ jobs:
           app-name: 'authenticationapplication1'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34A45F888C004990A83A293C2082AB0B }}
-          package: '*.jar'
+          package: '.mvn/wrapper/maven-wrapper.jar'
