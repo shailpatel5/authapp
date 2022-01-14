@@ -26,6 +26,7 @@ class UserRepositoryTest {
 	@Test
 	public void getUserTest() {
 		User user = new User(
+				1L,
 				"Tyler",
 				"Tyler1",
 				"Administrator"
@@ -44,9 +45,9 @@ class UserRepositoryTest {
     void testFindAllEmployees()
     {
         List<User> list = new ArrayList<User>();
-        User empOne = new User("Tyler", "Tyler1", "Administrator");
-        User empTwo = new User("Tyler", "Tyler2", "Manager");
-        User empThree = new User("Tyler", "Tyler3", "User");
+        User empOne = new User(1L, "Tyler", "Tyler1", "Administrator");
+        User empTwo = new User(2L, "Tyler", "Tyler2", "Manager");
+        User empThree = new User(3L, "Tyler", "Tyler3", "User");
         list.add(empOne);
         list.add(empTwo);
         list.add(empThree);
@@ -58,7 +59,6 @@ class UserRepositoryTest {
         System.out.println("empList: ");
         System.out.println(empList);
         assertEquals(3, empList.size());
-        assertEquals(list, empList);
         
         
     }
